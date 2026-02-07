@@ -5,12 +5,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-/**
- * Java25Examples
- *
- * <p>Примеры использования новых возможностей Java 25+
- */
-public class Java25Examples {
+public class JavaTestExamples {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         recordPatternExample();
@@ -20,10 +15,6 @@ public class Java25Examples {
 
     }
 
-    /**
-     * Пример использования паттернов для рекордов (Record Patterns).
-     * Упрощает извлечение данных из объектов.
-     */
     public static void recordPatternExample() {
         record Person(String name, int age) {}
 
@@ -37,13 +28,9 @@ public class Java25Examples {
         System.out.println("Record pattern: " + info);
     }
 
-    /**
-     * Пример виртуальных потоков (Project Loom).
-     * Позволяет писать многопоточку проще и эффективнее.
-     */
     public static void virtualThreadsExample() {
         try {
-            Thread.startVirtualThread(() -> System.out.println("Hello from virtual thread"))
+            Thread.startVirtualThread(() -> System.out.println("virtual thread"))
                     .join();
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -90,7 +77,7 @@ public class Java25Examples {
     private static void simulateIO(String taskName, int millis) {
         System.out.println(taskName + " started on " + Thread.currentThread());
         try {
-            Thread.sleep(millis); // имитация задержки ввода-вывода
+            Thread.sleep(millis);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

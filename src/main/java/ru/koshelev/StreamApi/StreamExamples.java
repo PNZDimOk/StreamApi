@@ -1,6 +1,9 @@
 package ru.koshelev.StreamApi;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -159,7 +162,7 @@ public class StreamExamples {
 
     /**
      * Пример 9.
-     * Реальная задача с собеседований.
+     *
      * <p>
      * Есть список заказов, каждый заказ содержит товары.
      * Нужно посчитать общую стоимость товаров
